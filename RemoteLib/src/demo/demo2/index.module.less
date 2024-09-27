@@ -1,0 +1,19 @@
+.wrap {
+  display: flex;
+  width: 100%;
+  position: relative;
+  height: 100%;
+  flex: auto;
+  .menu {
+    width: 200px;
+    flex: none;
+    height: 100%;
+  }
+  .main {
+    width: calc(100% - 200px);
+    padding: 0 12px;
+    flex:auto;
+    overflow-x: auto;
+    overflow-y: auto;
+  }
+}

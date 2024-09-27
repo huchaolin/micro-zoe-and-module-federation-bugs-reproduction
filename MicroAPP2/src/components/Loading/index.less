@@ -1,0 +1,29 @@
+.custom-loading-center,
+.custom-loading-top {
+	display: flex;
+	flex-direction: row;
+	flex: auto;
+	height: 100%;
+	width: 100%;
+	justify-content: center;
+	position: relative;
+	z-index: 1;
+	&.absolute,
+	.cover {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+	}
+	.cover {
+		background: #fff;
+		opacity: 0.5;
+	}
+}
+.custom-loading-center {
+	align-items: center;
+}
+.custom-loading-top {
+	align-items: flex-start;
+}

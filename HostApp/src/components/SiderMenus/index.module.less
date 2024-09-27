@@ -1,0 +1,52 @@
+.wrap {
+  height: 100%;
+  width: 200px;
+  flex: none;
+  position: relative;
+  transition: width 0.1s ease;
+  overflow-x: hidden;
+
+  &.collapsed {
+    width: 48px;
+  }
+  .innerWrap {
+    left:0;
+    top:0;
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    overflow-y: auto;
+    background: #090329;
+    .appNavList {
+      height: 100%;
+      overflow-y: auto;
+      .appNav {
+        padding: 8px;
+        display: flex;
+        cursor: pointer;
+      
+        
+        .navTexts {
+          .navTitle {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 22px;
+          }
+          .navSubTitle {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 18px;
+          }
+        }
+
+        &.active, &:hover {
+          background: #3880ff;
+          .navTitle, .navSubTitle {
+            color:  rgba(255, 255, 255, 1);
+          }
+        
+        }
+      }
+    }
+  }
+}

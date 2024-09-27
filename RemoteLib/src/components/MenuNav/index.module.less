@@ -1,0 +1,108 @@
+.menuNav {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.menuNavItem, .subMenuTitle {
+  &>div, &>a, &>span, &.isString  {
+    color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 47px;
+    padding: 0px 16px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    flex: none;
+  }
+  &:hover, &.active {
+    &>div, &>a, &>span, &.isString  {
+      background: var(--ant-color-primary-bg);
+      color: var( --color-primary);
+      &:after {
+        color: var(--color-primary);
+      }
+    }
+  }
+  :global {
+    a.active {
+      background: var(--ant-color-primary-bg);
+      color: var(--color-primary);
+      &:after {
+        color: var(--color-primary);
+      }
+    }
+  }
+}
+.subMenuTitle {
+  &>div, &>a, &>span, &.isString {
+    padding: 0px 12px 0px 16px;
+
+    &:after {
+      content: "\e638";
+      display: block;
+      font-family: "common-iconfont";
+      color: #858d95;
+      font-size: 16px;
+      margin-left: 4px;
+      transform: rotate(0deg);
+      transition: transform ease-in-out 0.14s;
+    }
+    &:hover {
+      height: 48px;
+      &:after {
+        transform: rotate(180deg);
+        color: var(--color-primary);
+      }
+    }
+  }
+  &.open {
+    &>div, &>a, &>span, &.isString  {
+      background: var(--ant-color-primary-bg);
+      color: var(--color-primary);
+      &:after {
+        transform: rotate(180deg);
+        color: var(--color-primary);
+      }
+    }
+  }
+  :global {
+    a.active {
+      background: var(--ant-color-primary-bg);
+      color: var(--color-primary);
+      &:after {
+        color: var(--color-primary);
+      }
+    }
+  }
+}
+
+.dropdownWrap{
+ background: #fff;
+ padding: 0;
+ :global {
+  .ant-dropdown-menu {
+    padding: 0;
+    border-radius: 2px;
+    .ant-dropdown-menu-item  {
+      padding: 0;
+      font-size: 12px;
+      font-weight: 400;
+      color: #666;
+    }
+   }
+ }
+.menuNavItem {
+  &>div, &>a, &>span, &.isString {
+    height: 36px!important;
+    font-size: 12px;
+    padding: 0;
+  }
+ }
+}
+.subMenuDropdownWrap {
+ padding: 0;
+ background: #fff;
+}
