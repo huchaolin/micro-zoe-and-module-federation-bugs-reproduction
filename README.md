@@ -1,7 +1,7 @@
 ## 问题描述
 
 1. 点击基座左侧导航进行切换时，若使用 `microApp.router.push` 的方式会报错`[micro-app] 导航失败，请确保子应用渲染后再调用此方法`, 但是`react-router-dom`自己的 `useNavigate` 则不会报错
-导航文件路径 
+
 
 2. 快速切换基座导航， 会报错 `Uncaught ChunkLoadError: Loading chunk App failed`， 目前我是采用防抖结合微应用加载的钩子函数来解决这个问题， 请问下有什么更好的方式推荐吗?
 
